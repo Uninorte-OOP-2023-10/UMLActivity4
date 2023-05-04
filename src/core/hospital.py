@@ -13,6 +13,14 @@ class Hospital:
         self.__teams: List["Team"] = []
         self.__wards: List["Ward"] = []
 
+    @property
+    def teams(self) -> List["Team"]:
+        return self.__teams
+    
+    @property
+    def wards(self) -> List["Ward"]:
+        return self.__wards
+
     def add_junior_doctor(self, team: "Team", doctor_id: int) -> bool:
         junior_doctor = JuniorDoctor(doctor_id, team)
         return True
